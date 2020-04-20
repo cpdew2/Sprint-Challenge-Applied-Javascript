@@ -44,5 +44,26 @@ imgContainer.classList.add('img-container');
 
 //nesting elements
 
+card.appendChild(headline);
+card.appendChild(author);
+author.appendChild(imgContainer);
+author.appendChild(name);
+imgContainer.appendChild(img);
+
+return card;
 
 }
+
+const cardsCondtainer = document.querySelector('.cards-container');
+
+axios
+    .get('https://lambda-times-backend.herokuapp.com/articles')
+    .then(response => {
+        console.log(response);
+        response.data.articles.bootstrap.forEach(item => {
+            const newArticle = article(item);
+            cardsCondtainer.appendChild(newArticle);
+        })
+
+        
+    })
