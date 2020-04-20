@@ -65,5 +65,27 @@ axios
             cardsCondtainer.appendChild(newArticle);
         })
 
-        
+        response.data.articles.javascript.forEach(item => {
+            const newArticle = article(item);
+            cardsCondtainer.appendChild(newArticle);
+        })
+
+        response.data.articles.jquery.forEach(item => {
+            const newArticle = article(item);
+            cardsCondtainer.appendChild(newArticle);
+        })
+
+        response.data.articles.node.forEach(item => {
+            const newArticle = article(item);
+            cardsCondtainer.appendChild(newArticle);
+        })
+
+        response.data.articles.technology.forEach(item => {
+            const newArticle = article(item);
+            cardsCondtainer.appendChild(newArticle);
+        })
+    }) 
+
+    .catch(error => {
+        console.log("We have an error:" + error)
     })
