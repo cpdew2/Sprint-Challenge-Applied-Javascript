@@ -3,7 +3,7 @@
 // Write a function that returns the markup you see below:
 //
 //  <div class="header">
-//    <span class="date">SMARCH 28, 2019</span>
+//    <span class="date">MARCH 28, 2019</span>
 //    <h1>Lambda Times</h1>
 //    <span class="temp">98°</span>
 //  </div>
@@ -24,6 +24,17 @@ function Header(item) {
     title.classList.add('title');
     temp.classList.add('temp');
 
-    
+    date.textContent = "March 28, 2019";
+    title.textContent = "Lambda Times";
+    temp.textContent = "98°";
 
+    head.appendChild(date);
+    head.appendChild(title);
+    head.appendChild(temp);
+
+    return head;
 }
+
+const theHead = Header();
+console.log(theHead);
+container.appendChild(theHead);
