@@ -8,6 +8,7 @@
 //  Each tab should look like this:
 //    <div class="tab">topic here</div>
 
+
 const news = document.querySelector('.topics');
 
 axios
